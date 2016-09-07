@@ -5,6 +5,10 @@
 	<title>{{title}}</title>
 </head>
 <body>  
-		我说的就是你说的 15155
+	<ul>
+    {{each list as value i}}
+        <li><a _href="{{value.url}}">索引 {{i + 1}} ：{{value.title}}</a></li>
+    {{/each}}
+</ul>
 </body>
 </html>

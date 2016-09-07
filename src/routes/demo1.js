@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-
 var demoData = {
-  title: 'node.js demo',  
+  title: 'node.js demo1',  
   time: (new Date).toString(),
   list: [
     {
