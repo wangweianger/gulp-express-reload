@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev":"gulp"
+    "dev": "gulp"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
@@ -17,15 +17,19 @@
   "devDependencies": {
     "art-template": "^3.0.3",
     "connect-livereload": "^0.5.4",
+    "cross-env": "^1.0.8",
     "express": "^4.14.0",
     "express-livereload": "0.0.24",
+    "glob": "^7.1.1",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-express": "^0.3.5",
     "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.3.2",
     "gulp-sequence": "^0.4.6",
+    "mysql": "^2.11.1",
+    "node-sass": "^3.10.1",
     "reload": "^1.0.1",
-    "serve": "^1.4.0",
-    "cross-env": "^1.0.8"
+    "serve": "^1.4.0"
   }
 }

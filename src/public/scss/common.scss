@@ -1,0 +1,17 @@
+@import 'vars.scss';
+
+//数据为空时的提示样式
+.data_list_empty{display:inline-block;width:64px;height:64px;background:url('../img/empty.png') no-repeat center center;}
+//-----数据为空时的提示样式结束-----
+
+// 主体文本容器
+.contenter{
+	width:1200px;
+	margin:0 auto;
+	// background: #eee;
+}
+
+
+
+
+

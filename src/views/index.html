@@ -1,14 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
 	<meta charset="UTF-8">
 	<title>{{title}}</title>
+	<link rel="stylesheet" href="/static/css/main.css">
+	<link rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>  
-	<ul>
-    {{each list as value i}}
-        <li><a _href="{{value.url}}">索引 {{i + 1}} ：{{value.title}}</a></li>
-    {{/each}}
+	<div class="contenter">
+		<ul class="main">
+	    {{each list as value i}}
+	        <li>
+	        	<img src="{{value.g_img}}">
+	        	<h1><a>{{value.goods_name}}</a></h1>
+	        	<p class="scj float-left">市场价：<span>¥{{value.market_price}}</span></p>
+				<p class="float-right">本店价：<span>¥{{value.shop_price}}</span></p>
+				<p class="float-left lightcolor">销量：<em>{{value.sales_num}}</em></p>
+				<p class="float-right lightcolor">点击量：<em>{{value.click_count}}</em></p>
+				<button onclick="addClickCount({{value.goods_id}},{{value.click_count}})">增加点击量</button>
+	        </li>
+	    {{/each}}
+    </div>
 </ul>
+<script src="/static/js/jquery-2.1.4.min.js"></script>
+<script>
+	function addClickCount(goodsId,num){
+		$.ajax({
+			type:'post',
+			url:'/order/addClickCount',
+			data:{
+				goodsId:goodsId,
+				num:num
+			},
+			success:function(data){
+				if(data.code=1000){
+					alert('更新成功！')
+				}
+			}
+		})
+	}
+</script>
 </body>
 </html>

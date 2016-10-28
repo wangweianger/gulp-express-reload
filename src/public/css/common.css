@@ -1,0 +1,9 @@
+.data_list_empty {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  background: url("../img/empty.png") no-repeat center center; }
+
+.contenter {
+  width: 1200px;
+  margin: 0 auto; }

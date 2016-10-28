@@ -17,14 +17,16 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
 // uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'img/favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
-require('./routes/index.js')(app);
+require('./routes.js')(app);
+
+require('./controller/indexController.js')(app);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
