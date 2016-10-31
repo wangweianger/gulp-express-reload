@@ -28,7 +28,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-sequence": "^0.4.6",
     "mysql": "^2.11.1",
-    "node-sass": "^3.10.1",
+    "node-sass": "^3.10.0",
     "reload": "^1.0.1",
     "serve": "^1.4.0"
   }

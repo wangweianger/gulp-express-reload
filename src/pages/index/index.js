@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var indexModel=require('../../model/indexModel.js'); 
 
 var demoData = {
   title: '首页商品',  
@@ -7,14 +8,15 @@ var demoData = {
   list: [],
 }; 
  
-// 查询数据列表
-require('../../mysql.js')('select * from goods',function(data){
-  demoData.list=data
-});
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', demoData);
+  
+  // 查询数据列表
+  indexModel.getIndexDatas(function(data){
+    demoData.list=data
+    res.render('index', demoData);
+  });
+
 });
 
 module.exports = router;

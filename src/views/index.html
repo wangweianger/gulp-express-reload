@@ -24,24 +24,7 @@
     </div>
 <script src="/static/js/jquery-2.1.4.min.js"></script>
 <script>
-	// var html="";
-	// $.ajax({
-	// 	type:'post',
-	// 	url:'/order/getAllDatas',
-	// 	success:function(data){
-	// 		html+='<li>\
-	//         	<img src="{{value.g_img}}">\
-	//         	<h1><a>{{value.goods_name}}</a></h1>\
-	//         	<p class="scj float-left">市场价：<span>¥{{value.market_price}}</span></p>\
-	// 			<p class="float-right">本店价：<span>¥{{value.shop_price}}</span></p>\
-	// 			<p class="float-left lightcolor">销量：<em>{{value.sales_num}}</em></p>\
-	// 			<p class="float-right lightcolor">点击量：<em>{{value.click_count}}</em></p>\
-	// 			<button onclick="addClickCount({{value.goods_id}},{{value.click_count}})">增加点击量</button>\
-	//         </li>';
-
-	// 	}
-	// })
-
+	// 点击新增销量
 	function addClickCount(goodsId,num){
 		$.ajax({
 			type:'post',
@@ -52,7 +35,7 @@
 			},
 			success:function(data){
 				if(data.code=1000){
-					alert('更新成功！')
+					location.reload();
 				}
 			}
 		})
